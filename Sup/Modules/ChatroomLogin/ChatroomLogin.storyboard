@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9eF-LC-Gvo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chatroom Login View Controller-->
+        <scene sceneID="FcQ-j5-rrs">
+            <objects>
+                <viewController storyboardIdentifier="ChatroomLoginViewController" id="9eF-LC-Gvo" customClass="ChatroomLoginViewController" customModule="ChatroomLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ak3-I5-DXS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LA-zc-PmV">
+                                <rect key="frame" x="172" y="89" width="70.5" height="43"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RT4-GO-GzB">
+                                <rect key="frame" x="25" y="152" width="364" height="36.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the followinf details and join the comminity chat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw0-Uo-NeL">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew-Light" family="Arial Hebrew" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C3u-jj-zEi">
+                                <rect key="frame" x="107" y="218.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WhI-HO-n4H"/>
+                                    <constraint firstAttribute="height" constant="200" id="uzh-h3-hl2"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-ov-BL0">
+                                <rect key="frame" x="20" y="448.5" width="374" height="86"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSi-8G-liH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="S4P-Ag-k68"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kV-Br-BLq">
+                                        <rect key="frame" x="0.0" y="53" width="374" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="jJD-mr-ErI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbe-wW-7y6">
+                                <rect key="frame" x="192" y="812" width="30" height="30"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qRB-4G-Ntg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RT4-GO-GzB" firstAttribute="top" secondItem="3LA-zc-PmV" secondAttribute="bottom" constant="20" id="3TQ-tJ-VBx"/>
+                            <constraint firstItem="O4c-ov-BL0" firstAttribute="leading" secondItem="qRB-4G-Ntg" secondAttribute="leading" constant="20" id="5fb-co-Tbe"/>
+                            <constraint firstItem="C3u-jj-zEi" firstAttribute="centerX" secondItem="qRB-4G-Ntg" secondAttribute="centerX" id="8V6-s5-1ah"/>
+                            <constraint firstItem="3LA-zc-PmV" firstAttribute="top" secondItem="qRB-4G-Ntg" secondAttribute="top" constant="45" id="BaV-96-YbG"/>
+                            <constraint firstItem="O4c-ov-BL0" firstAttribute="top" secondItem="C3u-jj-zEi" secondAttribute="bottom" constant="30" id="IpM-uZ-fet"/>
+                            <constraint firstItem="jbe-wW-7y6" firstAttribute="centerX" secondItem="qRB-4G-Ntg" secondAttribute="centerX" id="NGJ-mW-gCW"/>
+                            <constraint firstItem="qRB-4G-Ntg" firstAttribute="trailing" secondItem="O4c-ov-BL0" secondAttribute="trailing" constant="20" id="a6w-uC-MJV"/>
+                            <constraint firstItem="3LA-zc-PmV" firstAttribute="centerX" secondItem="qRB-4G-Ntg" secondAttribute="centerX" id="aFT-VZ-3DI"/>
+                            <constraint firstItem="RT4-GO-GzB" firstAttribute="leading" secondItem="qRB-4G-Ntg" secondAttribute="leading" constant="25" id="hGW-7g-vxD"/>
+                            <constraint firstItem="C3u-jj-zEi" firstAttribute="top" secondItem="Hw0-Uo-NeL" secondAttribute="bottom" constant="30" id="ire-8R-eyn"/>
+                            <constraint firstItem="qRB-4G-Ntg" firstAttribute="bottom" secondItem="jbe-wW-7y6" secondAttribute="bottom" constant="20" id="sMu-Il-vWe"/>
+                            <constraint firstItem="qRB-4G-Ntg" firstAttribute="trailing" secondItem="RT4-GO-GzB" secondAttribute="trailing" constant="25" id="u6t-Jz-ife"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="C3u-jj-zEi" id="TtK-OZ-18W"/>
+                        <outlet property="descriptionLabel" destination="Hw0-Uo-NeL" id="8Ct-d5-gFD"/>
+                        <outlet property="emailTextField" destination="6kV-Br-BLq" id="ljb-SO-czK"/>
+                        <outlet property="loginButton" destination="jbe-wW-7y6" id="jOu-k4-C4t"/>
+                        <outlet property="titleLabel" destination="3LA-zc-PmV" id="Wrq-4w-BMn"/>
+                        <outlet property="usernameTextField" destination="pSi-8G-liH" id="dTW-c9-1Cm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIW-8R-M5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
