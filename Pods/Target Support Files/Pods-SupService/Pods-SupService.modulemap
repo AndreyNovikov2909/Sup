@@ -1,0 +1,6 @@
+framework module Pods_SupService {
+  umbrella header "Pods-SupService-umbrella.h"
+
+  export *
+  module * { export * }
+}

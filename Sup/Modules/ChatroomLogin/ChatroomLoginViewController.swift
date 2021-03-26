@@ -20,6 +20,14 @@ class ChatroomLoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - Viper Module
+    
+    var presenterProducer: ChatroomPresentation.Producer!
+    private var presenter: ChatroomPresentation!
+    
+    // MARK: - Private properties
+    
+    private let dispose = DisposeBag()
     
     // MARK: - Object livecycle
     
@@ -27,6 +35,21 @@ class ChatroomLoginViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        
+        setupProducer()
+        setupBinding()
+    }
+    
+    private func setupProducer() {
+        let input = (username: usernameTextField.rx.text.orEmpty.asDriver(),
+                     email: emailTextField.rx.text.orEmpty.asDriver(),
+                     loginTapped: loginButton.rx.tap.asDriver())
+        
+        presenter = presenterProducer(input)
+    }
+    
+    private func setupBinding() {
+        presenter.output.loginEnable.drive(loginButton.rx.isEnabled).disposed(by: dispose)
     }
 }
 

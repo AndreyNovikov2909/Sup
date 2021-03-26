@@ -22,6 +22,8 @@ class Router {
     init(window: UIWindow, submodules: Submodules) {
         self.window = window
         self.submodules = submodules
+        
+        window.overrideUserInterfaceStyle = .light
     }
 }
 
