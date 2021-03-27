@@ -9,7 +9,7 @@ import Foundation
 import SupService
 
 public final class UseCasesFactory {
-    private static let webSocketService = ChatRoomWebSocketService()
+    private static let socketURLString = "https://damp-beach-81446-herokuapp.com/"
+    private static let webSocketService = ChatRoomWebSocketService(socketUrlString: socketURLString)
     public static let accountInteractor = AccountInteractor(webScketService: webSocketService)
-    
 }
